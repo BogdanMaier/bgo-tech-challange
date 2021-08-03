@@ -21,7 +21,7 @@ function ArticleList() {
         <h1>Articles listing</h1>
 
         <ul>
-            {articles.map(({date, localized, id}, index) => (<li key={id || index}>
+            {(articles || []).map(({date, localized, id}, index) => (<li key={id || index}>
                 <Link to={`${url}/${id}`}>
                     <h4>
                         {localized[locale].title}

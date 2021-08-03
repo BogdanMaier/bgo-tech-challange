@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { DUMMY_DATA, DUMMY_DATA_OBJ } from '../../data/dummy-data';
 
 const KEY = Object.freeze('articles')
 
@@ -10,18 +11,19 @@ export const ArticlesProvider = ({ children }) => {
     const [articles, setArticles] = useState(undefined);
 
     useEffect( () => {
-        let initArticles = localStorage.getItem(KEY);
+        let initArticles;
 
         try {
-            initArticles = JSON.parse(initArticles)
+            initArticles = JSON.parse(localStorage.getItem(KEY))
+            if (initArticles === null) throw new Error('no data')
         } catch (err) {
-            console.warn(`ERROR: %o`, err)
-            initArticles = []
+            console.warn(`There was an error ,\nLoading dummy data`)
+
+            initArticles = JSON.parse(DUMMY_DATA_OBJ.articles)
         } finally {
+            setArticles(initArticles)
             setLoaded(true)
         }
-
-        setArticles(initArticles);
     }, []);
 
     // store articles state changes
