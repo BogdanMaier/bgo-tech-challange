@@ -1,9 +1,15 @@
 .App {
-
   a,
   a:visited,
   a:hover,
   a:active {
-      color: initial;
+    color: initial;
+  }
+
+  .nav {
+    width: 600px;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-around;
   }
 }
