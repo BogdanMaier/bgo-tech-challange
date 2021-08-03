@@ -16,7 +16,7 @@ function App() {
                         <Container fluid="md">
                             <Row sm>
                                 <Col md={{ span: 6, offset: 3 }}>
-                                    <div className="nav">
+                                    <div className="dummy-navigation">
                                         <Link to={`/en/articles`}>
                                             {`reader en articles`}
                                         </Link>
