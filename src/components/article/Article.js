@@ -86,7 +86,6 @@ function Article() {
     }
 
     return (<div className="Article">
-        <h3>{`Article: ${articleId} - (${article?.id || 'no id'})`}</h3>
         {
             article && <Form>
                 <Tabs defaultActiveKey={locale}
