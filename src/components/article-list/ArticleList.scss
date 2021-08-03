@@ -1,0 +1,41 @@
+.ArticleList {
+  width: 600px;
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-weight: 300;
+    text-align: center;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      border-bottom: 2px solid rgba(27, 91, 112, 0.34);
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+
+      h4 {
+        margin-bottom: 12px;
+        font-weight: bold;
+        color: rgba(47, 169, 210, 0.66);
+      }
+
+
+      p {
+        overflow: hidden;
+        max-width: 75ch;
+        height: 30px;
+        margin: 0;
+      }
+
+      footer {
+        color: rgba(59, 57, 57, 0.53);
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.AdminTable {
+  width: 600px;
+
+  table {
+    width:100%;
+
+    thead tr {
+      background: #efa4a4;
+
+      &#on-top  {
+        background: initial;
+
+        td {
+          text-align: right;
+        }
+      }
+    }
+
+    th:first-child {
+      font-weight: 400;
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background: rgba(#efa4a4, .3)
+      }
+
+      tr:nth-child(odd) {
+        background: #FFF
+      }
+    }
+  }
+}

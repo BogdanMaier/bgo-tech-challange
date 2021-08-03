@@ -1,0 +1,39 @@
+.ArticleView {
+  color: rgba(40, 44, 52, 0.84);
+  & > * {
+    margin-bottom: 25px;
+  }
+
+  h1, h3, h4 {
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: 300;
+  }
+
+  h3 {
+    font-weight: 600;
+  }
+
+  h4 {
+    font-weight: 500;
+    color: rgba(47, 169, 210, 0.66);
+  }
+
+  p {
+    min-height: 200px;
+  }
+
+  date {
+    color: rgba(40, 44, 52, 0.54);
+  }
+
+  footer {
+    color: rgba(47, 169, 210, 0.66);
+
+    & > *:hover {
+      cursor: pointer;
+    }
+  }
+}
