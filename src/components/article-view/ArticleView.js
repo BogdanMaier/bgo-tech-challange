@@ -48,10 +48,10 @@ function ArticleView() {
             <h4>
                 { getPath(article, `localized.${locale}.title`) }
             </h4>
-            <p>
-                {getPath(article, `localized.${locale}.content`)}
-            </p>
+            <p dangerouslySetInnerHTML={{ __html: getPath(article, `localized.${locale}.content`)}} />
+
             <div className="date"> {formatDate(article.date)} </div>
+
             <footer>
                 <Row>
                     <Col xl lg="8">

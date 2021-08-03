@@ -56,22 +56,23 @@ export const ArticlesProvider = ({ children }) => {
     }
 
     const get = (id, withNextAndPrev) => {
-        let index, res;
+        let index, pagination;
         const article = articles && articles.find((article, i) => {
             index = i
             return article.id === id
         });
 
-
         if (withNextAndPrev && !isNaN(index)) {
-            res = {
-                ...article,
+            pagination = {
                 prev: articles[index - 1]?.id,
                 next: articles[index + 1]?.id,
             }
         }
 
-        return res
+        return {
+            ...pagination,
+            ...article,
+        }
     }
 
     return (

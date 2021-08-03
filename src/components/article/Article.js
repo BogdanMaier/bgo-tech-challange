@@ -40,7 +40,7 @@ function Article() {
     const {updateLocationsLanguage, goBack} = useContext(LanguageContext);
 
     useEffect(() => {
-        async function setup() {
+        function initArticle() {
             if (articleId !== 'new') {
                 const storageArticle = get(articleId)
                 setArticle(storageArticle)
@@ -51,7 +51,7 @@ function Article() {
                 })
             }
         }
-        setup();
+        initArticle();
     }, [loaded])
 
     useEffect(() => {

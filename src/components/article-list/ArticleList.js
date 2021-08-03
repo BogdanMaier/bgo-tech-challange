@@ -27,9 +27,8 @@ function ArticleList() {
                         {localized[locale].title}
                     </h4>
                 </Link>
-                <p>
-                    {localized[locale].content}
-                </p>
+                <p dangerouslySetInnerHTML={{ __html: localized[locale].content }} />
+
                 <footer> {formatDate(date)} </footer>
             </li>))}
         </ul>
